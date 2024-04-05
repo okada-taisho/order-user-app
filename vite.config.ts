@@ -7,4 +7,14 @@ installGlobals();
 
 export default defineConfig({
   plugins: [remix(), tsconfigPaths()],
+  resolve: {
+    alias: {
+      "@": "/app",
+    },
+  },
+  server: {
+    watch: {
+      usePolling: true
+    }
+  }
 });
